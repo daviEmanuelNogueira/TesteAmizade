@@ -19,8 +19,9 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 62.5%;
         }
-        h1{
-        font-size: 5em;
+
+        h1 {
+            font-size: 5em;
         }
 
         .container {
@@ -34,7 +35,7 @@
 
         }
 
-        button {
+        .button {
             color: pink;
             background-color: black;
             text-decoration: none;
@@ -44,7 +45,7 @@
             border-radius: 10px;
         }
 
-        button:hover {
+        .button:hover {
             color: black;
             background-color: pink;
         }
@@ -59,22 +60,27 @@
             <h1>A Samara é minha amiga?</h1><br>
         </div>
         <div>
-            <button onclick="Sim()">SIM</button>
+            <button class="button" onclick="Sim()">SIM</button>
         </div>
         <div>
-            <button onclick="Nao()">NÃO</button>
+            <button class="button" onclick="Nao()">NÃO</button>
         </div>
     </div>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-
         function Sim() {
-            alert("Será?")
+            Swal.fire({
+                icon: 'question',
+                text: 'Será mesmo?',
+            })
         }
 
 
         function Nao() {
-            alert("Eu já sabia!!!")
+            Swal.fire({
+                icon: 'error',
+                text: 'Eu já sabia!',
+            })
         }
 
     </script>
