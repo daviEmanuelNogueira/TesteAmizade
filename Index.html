@@ -1,44 +1,83 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
 
-<title>Teste de amizade</title>
-<style>
-button {
-color:pink;
-background-color:black;
-}
+    <title>Teste de amizade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-button:hover {
-color:black;
-background-color:pink;
-}
-</style>
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: aqua;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 62.5%;
+        }
+        h1{
+        font-size: 5em;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        button {
+            color: pink;
+            background-color: black;
+            text-decoration: none;
+            width: 500px;
+            height: 150px;
+            font-size: 5em;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            color: black;
+            background-color: pink;
+        }
+    </style>
 
 </head>
-<body style="background-color:#00FFFF">
 
-<div style="margin-top: 25%;text-align:center">
+<body>
 
-<h1>A Samara é minha amiga?</h1>
+    <div class="container">
+        <div>
+            <h1>A Samara é minha amiga?</h1><br>
+        </div>
+        <div>
+            <button onclick="Sim()">SIM</button>
+        </div>
+        <div>
+            <button onclick="Nao()">NÃO</button>
+        </div>
+    </div>
 
-<button onclick="Sim()">SIM</button>
-<button onclick="Nao()">NÃO</button>
+    <script>
 
-</div>
-
-<script>
-
-function Sim(){
-alert("Será?")
-}
+        function Sim() {
+            alert("Será?")
+        }
 
 
-function Nao(){
-alert("Eu já sabia!!!")
-}
+        function Nao() {
+            alert("Eu já sabia!!!")
+        }
 
-</script>
+    </script>
 </body>
+
 </html>
